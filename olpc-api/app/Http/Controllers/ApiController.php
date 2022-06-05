@@ -14,7 +14,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        return response(Pclist::all());
+        return Pclist::all()->toJson(JSON_UNESCAPED_UNICODE);
     }
 
     /**
@@ -46,7 +46,7 @@ class ApiController extends Controller
      */
     public function show($id)
     {
-        return response(Pclist::find($id));
+        return Pclist::find($id)->toJson(JSON_UNESCAPED_UNICODE);
     }
 
     /**
