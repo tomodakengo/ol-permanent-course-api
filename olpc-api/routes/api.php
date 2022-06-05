@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('courses', 'ApiController@getAllCourses');
-Route::get('courses/{id}', 'ApiController@getCourse');
+Route::get('/courses', [ApiController::class ,'index']);
+Route::get('/courses/{id}', [ApiController::class ,'show']);
