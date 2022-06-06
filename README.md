@@ -25,21 +25,15 @@ Response
   },
   {
     "id":1,
-    "name":"\u770c\u6c11\u306e\u68ee",
-    "prefecture":"\u5bae\u57ce",
+    "name":"県民の森",
+    "prefecture":"宮城",
     "managementNo":3,
     "licenseNo":262,
-    "startPosition":"\u770c\u6c11\u306e\u68ee\u4e2d\u592e\u8a18\u5ff5\u9928",
+    "startPosition":"県民の森中央記念館",
     "latitude":null,
     "longitude":null,
-    "whereToGet":"\u770c\u6c11\u306e\u68ee\u4e2d\u592e\u8a18\u5ff5\u9928",
+    "whereToGet":"県民の森中央記念館",
     "distance":"10"
   }
 ]
 ```
-
-注意点
-
-json_encodeの指定のやり方が分からなかったので、Responseの日本語部分がunicodeで表示されています。
-
-使用している文字コードは`UTF-8`です。
