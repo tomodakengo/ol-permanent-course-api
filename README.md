@@ -41,3 +41,26 @@ Response
   }
 ]
 ```
+
+### Specify by  Course ID
+URL
+`https://olpc-api.herokuapp.com/api/courses/1`
+
+Response
+
+```json
+[
+  {
+    "id":1,
+    "name":"県民の森",
+    "prefecture":"宮城",
+    "managementNo":3,
+    "licenseNo":262,
+    "startPosition":"県民の森中央記念館",
+    "latitude":null,
+    "longitude":null,
+    "whereToGet":"県民の森中央記念館",
+    "distance":"10"
+  }
+]
+```
