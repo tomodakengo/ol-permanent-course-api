@@ -1,7 +1,5 @@
 # ol-permanent-course-api
 
-heroku にて再デプロイしました。
-
 ## URL
 
 バックエンド
