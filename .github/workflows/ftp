@@ -2,7 +2,7 @@ name: ftp-upload
 on:
   push:
     branches:
-      - master()
+      - master
 
 jobs:
   web-deploy:
