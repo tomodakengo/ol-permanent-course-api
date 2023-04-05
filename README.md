@@ -2,15 +2,15 @@
 
 ## URL
 
-バックエンド
-[https://olpc-api.herokuapp.com/](https://olpc-api.herokuapp.com/)
+バックエンドベース
+[https://olpc.navispo.com/api/](https://olpc.navispo.com/api/)
 
 ## API の呼び出し
 
 ### All Courses
 
 URL
-`https://olpc-api.herokuapp.com/api/courses`
+`https://olpc.navispo.com/api/courses`
 
 Response
 
@@ -46,7 +46,7 @@ Response
 ### Specify by Course ID
 
 URL
-`https://olpc-api.herokuapp.com/api/courses/1`
+`https://olpc.navispo.com/api/courses/1`
 
 Response
 
