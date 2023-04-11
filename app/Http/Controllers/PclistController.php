@@ -17,11 +17,17 @@ class PclistController extends Controller
         $prefecture = $request->input('pref');
 
         if (empty($prefecture)) {
-            $pclists = Pclist::all()->first();
+            $pclists = Pclist::all();
         }else{
-            $pclists = Pclist::where('prefecture',$prefecture)->first();
+            $pclists = Pclist::where('prefecture',$prefecture);
         }
-        return compact($pclists);
+
+        return view(
+            'home',
+            compact(
+                'pclists'
+            )
+        );
     }
 
     /**
