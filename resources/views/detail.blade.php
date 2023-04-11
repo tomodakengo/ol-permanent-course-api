@@ -3,7 +3,10 @@
     @extends('components.header')
 <main class="container">
     <div class="mt-3 mb-3">
-        <a href="javascript:history.back()" class="btn btn-light"><i class="bi bi-chevron-left pe-2"></i>一覧に戻る</a>
+        @php
+            $urlToHome = url("/");
+        @endphp
+        <a href="{{ $urlToHome }}" class="btn btn-light"><i class="bi bi-chevron-left pe-2"></i>一覧に戻る</a>
     </div>
 
     <div class="card">
