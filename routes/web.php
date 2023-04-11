@@ -15,3 +15,5 @@ use App\Http\Controllers\PclistController;
 */
 
 Route::get('/', [PclistController::class ,'index']);
+
+Route::get('/{id}', [PclistController::class ,'detail']);

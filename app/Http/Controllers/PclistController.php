@@ -30,6 +30,18 @@ class PclistController extends Controller
         );
     }
 
+    public function detail($id)
+    {
+        $details = Pclist::find($id);
+
+        return view(
+            'detail',
+            compact(
+                'details'
+            )
+        );
+    }
+
     /**
      * Show the form for creating a new resource.
      *

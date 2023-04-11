@@ -32,19 +32,17 @@
                 </thead>
                 <tbody>
                     @foreach ($pclists as $pclist)
-                        <tr>
+                        @php
+                        $urlToDetail = url("/{$pclist->id}");
+                        @endphp
+
+                        <tr onclick="window.location='{{ $urlToDetail }}'">
                             <td>{{ $pclist->id }}</td>
                             <td>{{ $pclist->name }}</td>
                             <td>{{ $pclist->prefecture }}</td>
                             <td>{{ $pclist->distance }}km</td>
                         </tr>
                     @endforeach
-                    <tr onclick="window.location='#'">
-                        <td>1</td>
-                        <td>サンプル</td>
-                        <td>北海道</td>
-                        <td>3.0km</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
