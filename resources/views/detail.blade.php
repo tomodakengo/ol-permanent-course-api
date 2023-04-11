@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>コース距離</th>
-                        <td>{{ $details->distance }}</td>
+                        <td>{{ $details->distance }}km</td>
                     </tr>
                 </table>
             </div>
