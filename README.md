@@ -2,6 +2,9 @@
 
 ## URL
 
+データ閲覧ページ
+[https://olpc.navispo.com/](https://olpc.navispo.com/)
+
 バックエンドベース
 [https://olpc.navispo.com/api/](https://olpc.navispo.com/api/)
 
