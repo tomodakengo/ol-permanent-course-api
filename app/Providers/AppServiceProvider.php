@@ -23,7 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //httpsを必ず利用する
-        \URL::forceScheme('https');
+        //ローカル環境以外ではhttpsを必ず利用する
+        if (!\App::environment('local')) {
+            \URL::forceScheme('https');
+        }
     }
 }
