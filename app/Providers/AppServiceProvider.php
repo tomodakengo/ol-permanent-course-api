@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //httpsを必ず利用する
+        \URL::forceScheme('https');
     }
 }
