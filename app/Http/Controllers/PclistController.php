@@ -12,24 +12,41 @@ class PclistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /** 
+     * home.blade.php
+     * 
+     * @return array $pclists 全てのパーマネントコースの情報
+     * @return array $prefectures 登録されている都道府県の情報
+     * @return string $prefecture 絞り込み検索している都道府県 
+     */
     public function index(Request $request)
     {
-        $prefecture = $request->input('pref');
+        // 都道府県絞り込み検索の内容を取得する
+        $pref = $request->input('pref');
 
-        if (empty($prefecture)) {
+        // 絞り込み検索が無い場合は全件返す
+        if (empty($pref)) {
             $pclists = Pclist::all();
         }else{
-            $pclists = Pclist::where('prefecture',$prefecture);
+            $pclists = Pclist::where('prefecture',$pref)->get();
         }
 
+        //登録されている都道府県リストを返す
+        $prefectures = Pclist::groupBy('prefecture')->orderBy('id')->get(['prefecture']);
+
+        //bladeに返す値
         return view(
             'home',
             compact(
-                'pclists'
+                'pclists',
+                'prefectures',
+                'pref'
             )
         );
     }
 
+    /* detail.blade.phpに返すパーマネントコース詳細 */
     public function detail($id)
     {
         $details = Pclist::find($id);
