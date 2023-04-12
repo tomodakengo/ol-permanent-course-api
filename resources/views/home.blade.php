@@ -3,14 +3,21 @@
     @extends('components.header')
 
     <main class="container">
-        {{-- <div class="mt-3 mb-3">
-            <form action="#" method="get" class="row">
+        <div class="mt-3 mb-3">
+            <form action="{{ url('/'); }}" method="get" class="row">
                 @csrf
                 <div class="col-auto">
                     <select name="pref" id="pref" class="form-select" aria-label="都道府県">
-                        <option selected>都道府県を絞る</option>
-                        @foreach ( as )
-                            
+                        <option>都道府県を絞る</option>
+                        @foreach ($prefectures as $prefecture)
+                            <option 
+                            value="{{ $prefecture->prefecture }}"
+                            @if ($pref == $prefecture->prefecture)
+                                selected
+                            @endif
+                            >
+                                {{ $prefecture->prefecture }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -18,7 +25,7 @@
                     <button type="submit" class="btn btn-primary">検索</button>
                 </div>
             </form>
-        </div> --}}
+        </div>
         
         <div class="table-responsive">
             <table class="table table-sm text-nowrap">
