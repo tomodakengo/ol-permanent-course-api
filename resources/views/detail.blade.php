@@ -40,6 +40,22 @@
                     </tr>
                 </table>
             </div>
+
+            <div class="col-md-12">
+                <div id="map"></div>
+            </div>
+
+            <script type="text/javascript">
+            //緯度,経度,ズーム
+            var map = L.map('map').setView([{{ $details->latitude }}, {{ $details->longitude }}], 12);
+            // OpenStreetMap から地図画像を読み込む
+            L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
+            }).addTo(map);
+            L.marker({{ $details->latitude }}, {{ $details->longitude }}).addTo(map);
+    </script>
+
         </div>
     </div>
 </main>
