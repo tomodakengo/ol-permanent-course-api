@@ -8,7 +8,7 @@
                 @csrf
                 <div class="col-auto">
                     <select name="pref" id="pref" class="form-select" aria-label="都道府県">
-                        <option>都道府県を絞る</option>
+                        <option value="">都道府県を絞る</option>
                         @foreach ($prefectures as $prefecture)
                             <option 
                             value="{{ $prefecture->prefecture }}"
