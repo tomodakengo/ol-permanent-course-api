@@ -40,7 +40,7 @@
                 <tbody>
                     @foreach ($pclists as $pclist)
                         @php
-                        $urlToDetail = url("/{$pclist->id}");
+                        $urlToDetail = url("/pcs/{$pclist->id}");
                         @endphp
 
                         <tr onclick="window.location='{{ $urlToDetail }}'">
